@@ -1,0 +1,157 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>A simple, clean, and responsive HTML invoice template</title>
+        
+        <link rel="stylesheet" type="text/css" href="assets/css/invoice.css">
+    </head>
+    <body>
+        <div class="invoice-box">
+            <table cellpadding="0" cellspacing="0">
+                <tr class="top">
+                    <td colspan="2">
+      
+                        <table>
+                            <tr>
+                                <td class="title">
+                                <img src="../img/logo2.png" alt="site-logo" class="site-logo"  style="width:100%; max-width:300px;">
+                                </td>
+        
+                                <td>
+                                    Invoice #: {{ patient_nom }}<br>
+                                   
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                
+                <tr class="information">
+                    <td colspan="2">
+                        <table>
+                            <tr>
+                            
+                                
+                                <td>{{ idUser }}<br>
+                                    {{ patient_email }}<br>{{ patient_nom }}<br>
+                                  
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                
+                
+                
+                <tr class="heading">
+                    <td>
+                       liste des medicament
+                    </td>
+                    
+                    <td>
+                        #
+                    </td>
+                </tr>
+                
+                <tr class="item">
+                    <td>
+                        nbrfois
+                    </td>
+                    
+                    <td>
+                        {{ nbrfois }}<br>
+                    </td>
+                </tr>
+                
+                <tr class="item">
+                    <td>
+                        nbrjour
+                    </td>
+                    
+                    <td>
+                        {{ nbrjour }}<br>
+                       
+                    </td>
+                </tr>
+
+
+    
+                
+                
+                
+            </table>
+        </div>
+        <style>
+            /* Set box sizing to border-box for all elements */
+* {
+  box-sizing: border-box;
+}
+
+/* Style the invoice box */
+.invoice-box {
+  max-width: 800px;
+  margin: auto;
+  border: 1px solid #ccc;
+  padding: 20px;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+  color: #555;
+}
+
+/* Style the header section */
+.invoice-box table {
+  width: 100%;
+  line-height: inherit;
+  text-align: left;
+}
+
+.invoice-box table td {
+  padding: 5px;
+  vertical-align: top;
+}
+
+/* Style the header image */
+.site-logo {
+  height: auto;
+  max-width: 100%;
+}
+
+/* Style the invoice information section */
+.information {
+  background-color: #f5f5f5;
+}
+
+/* Style the heading row of the items section */
+.heading {
+  background-color: #eee;
+  font-weight: bold;
+}
+
+/* Style the item rows */
+.item td {
+  border-bottom: 1px solid #eee;
+}
+
+/* Style the total row */
+.total td {
+  border-top: 2px solid #eee;
+  font-weight: bold;
+}
+
+/* Set the media queries for responsive design */
+@media only screen and (max-width: 600px) {
+  .invoice-box table tr.top table td {
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+  
+  .invoice-box table tr.information table td {
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+}
+        </style>

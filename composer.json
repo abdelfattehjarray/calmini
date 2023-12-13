@@ -1,0 +1,6 @@
+{     "require": {
+        "phpoffice/phpword": "^0.18.0",
+        "davmixcool/php-sentiment-analyzer": "^1.2"
+    }
+  }
+
